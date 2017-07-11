@@ -3,7 +3,7 @@
         <div class="left-col">
             <div>
                 <a href="{{ a.url }}" >{{a.title}}</a>
-                <span *ngFor="let c of a.labels"  class="label" color>{{c.name}}</span>
+                <span *ngFor="let c of a.labels"  class="label" color="{{getColor(c.color)}}">{{c.name}}</span>
             </div>
 
             <div class="second-line">

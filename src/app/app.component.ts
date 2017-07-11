@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import { Response} from '@angular/http';
 import  {AppService} from './app.service';
 
@@ -10,7 +10,11 @@ import  {AppService} from './app.service';
 })
 export class AppComponent{
   constructor(private appService: AppService) {
-    this.appService.getData().subscribe((data: Response) => {this.array=data});
+    this.appService.getData()
+      .then((data: Response) => {this.array=data;console.log(this, data)});
   }
   public array: any;
+  getColor(colorStr:string){
+    return '#' + colorStr;
+  }
 }

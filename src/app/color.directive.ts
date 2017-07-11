@@ -1,9 +1,13 @@
-import {Directive, HostBinding } from '@angular/core';
+import {Directive, Input, HostBinding } from '@angular/core';
 
 @Directive({
-    selector: '[color]'
+  selector: '[color]'
 })
 export class ColorDirective{
-    @HostBinding('style.background-color')
-    backgroundColor:string = 'yellow';
+  @HostBinding('style.background-color')
+
+  @Input() color: any;
+  backgroundColor:string = this.color;
+
+
 }
