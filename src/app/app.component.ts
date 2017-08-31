@@ -26,10 +26,6 @@ export class AppComponent implements OnInit {
     return '#' + colorStr;
   }
 
-  getUser(user: Mock){
-    var m = new Mock();
-    m.title = "fds";
-  }
   getArray(data: string){
     this.attr = data;
   }

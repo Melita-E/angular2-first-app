@@ -8,5 +8,6 @@ export class Mock{
 
 export class Comment{
     body: string;
-    id: number;
+    user: Array<string>;
+    created_at: any;
 }

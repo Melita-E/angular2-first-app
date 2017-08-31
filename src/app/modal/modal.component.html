@@ -1,10 +1,10 @@
 <div class="modal">
     <div class="modal__header">
-
+       Comments
     </div>
-    <!--<div class="modal__body">-->
-        <!--<p>Lorem ipsum dolor sit amet</p>-->
-        <!--<span ></span>-->
-    <!--</div>-->
-    <span *ngFor="let b of comment">{{b.message}}</span>
+    <div *ngFor="let b of comment" class="item">
+        <span>{{b.body}}</span>
+        <span>{{b.user.login}}</span>
+    </div>
+    <button> close </button>
 </div>

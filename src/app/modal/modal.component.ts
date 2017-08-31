@@ -3,8 +3,6 @@ import  {AppService} from '../app.service';
 import { Response} from '@angular/http';
 import {Comment} from '../mock';
 
-
-
 @Component({
     selector:'modal',
     providers: [AppService],
@@ -18,18 +16,10 @@ export class ModalComponent implements OnChanges {
 
     }
     comments: Array<Component> = [];
-    // ngOnInit(){
-    //     this.appService.getData(this.url).subscribe((data: Response) => {
-    //         this.comment=data.json();
-    //     });
-    //
-    //     // console.log(this.url);
-    // }
     ngOnChanges (){
-        this.appService.getData(this.url).subscribe((data: Response) => {
+        this.appService.getData('./app/comments/17950.json').subscribe((data: Response) => {
             this.comment=data.json();
         });
         console.log(this.url);
     }
-
 }
