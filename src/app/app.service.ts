@@ -7,11 +7,12 @@ import 'rxjs/add/operator/toPromise';
 export class AppService {
     constructor (private http: Http) {}
     // private url = `https://api.github.com/repos/angular/angular/issues`;
-    private url = './app/issues.json';
+    // private url = './app/issues.json';
 
-    getData() {
-        return this.http.get(this.url)
-          .map((res:Response) => res.json())
-          .toPromise();
+    extractData(res: Response){
+        return res.json();
+    }
+    getData(url: string){
+        return this.http.get(url);
     }
 }

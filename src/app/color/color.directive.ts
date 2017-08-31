@@ -8,6 +8,4 @@ export class ColorDirective{
 
   @Input() color: any;
   backgroundColor:string = this.color;
-
-
 }
