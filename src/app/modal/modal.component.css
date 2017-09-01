@@ -1,10 +1,10 @@
 .modal{
     position: fixed;
-    width: 300px;
+    width: 400px;
     top: 50%;
     left: 50%;
     padding: 10px;
-    background: forestgreen;
+    background: white;
     transform: translate(-50%, -50%);
     box-shadow: inset 0 0 7px 3px rgba(255,255,255,0.5), 0 -1px 7px 5px rgba(6,6,6,0.5);}
 
@@ -18,4 +18,13 @@
 }
 .item{
     margin: 5px 0;
+    border: 1px solid #c0d3eb;
+}
+.author{
+    background: #f1f8ff;
+    border-bottom: 1px solid #c0d3eb;
+    padding: 10px;
+}
+.message{
+    padding: 10px;
 }

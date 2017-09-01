@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges} from '@angular/core';
+import {Component, Input, OnChanges, Output, EventEmitter} from '@angular/core';
 import  {AppService} from '../app.service';
 import { Response} from '@angular/http';
 import {Comment} from '../mock';
@@ -12,14 +12,22 @@ import {Comment} from '../mock';
 export class ModalComponent implements OnChanges {
     comment: Comment[]=[];
     @Input() url: string;
+
+    @Input() visible: boolean;
+    @Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+
     constructor(private appService: AppService) {
 
     }
     comments: Array<Component> = [];
     ngOnChanges (){
-        this.appService.getData('./app/comments/17950.json').subscribe((data: Response) => {
+        this.appService.getData(this.url).subscribe((data: Response) => {
             this.comment=data.json();
         });
         console.log(this.url);
+    }
+    close() {
+        this.visible = false;
+        this.visibleChange.emit(this.visible);
     }
 }

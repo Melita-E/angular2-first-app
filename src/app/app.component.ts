@@ -14,6 +14,7 @@ import {ColorDirective} from './color/color.directive';
 export class AppComponent implements OnInit {
   mock: Mock[]=[];
   attr: string;
+  showDialog: boolean;
   constructor(private appService: AppService) { }
 
   ngOnInit() {
@@ -28,5 +29,6 @@ export class AppComponent implements OnInit {
 
   getArray(data: string){
     this.attr = data;
+    this.showDialog = true;
   }
 }

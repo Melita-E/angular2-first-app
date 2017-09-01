@@ -1,10 +1,10 @@
-<div class="modal">
+<div class="modal" *ngIf="visible">
     <div class="modal__header">
        Comments
     </div>
     <div *ngFor="let b of comment" class="item">
-        <span>{{b.body}}</span>
-        <span>{{b.user.login}}</span>
+        <div class="author"> {{b.user.login}}</div>
+        <div class="message">{{b.body}}</div>
     </div>
-    <button> close </button>
+    <button (click)="close()"> close </button>
 </div>
