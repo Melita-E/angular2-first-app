@@ -62,14 +62,23 @@ a{
   color: teal;
   padding: 5px;
   &:hover{
-    background: rgba(211, 204, 204, 0.46);
+    .comment__icon path {
+      stroke: teal;
+    }
+    .comment__amount {
+      font-weight: 600;
+    }
   }
-  span{
+  &__amount{
     font-weight: 400;
   }
 
-  path{
-    fill:  teal;
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    path{
+      fill:  teal;
+    }
   }
 }
 

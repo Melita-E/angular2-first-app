@@ -1,6 +1,6 @@
 .modal{
     position: fixed;
-    width: 400px;
+    width: 430px;
     top: 50%;
     left: 50%;
     padding: 10px;
@@ -16,6 +16,10 @@
     color: #383838;
     /*text-shadow: 5px -1px 3px rgba(255,255,255,0.75);*/
 }
+.modal__body {
+    max-height: 400px;
+    overflow: auto;
+}
 .item{
     margin: 5px 0;
     border: 1px solid #c0d3eb;
@@ -27,4 +31,24 @@
 }
 .message{
     padding: 10px;
+}
+
+.btn {
+    outline: none;
+    background-color: #eff3f6;
+    background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%);
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid #c0d3eb;
+    border-radius: 5px;
+    appearance: none;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #28a745;
+    background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
 }

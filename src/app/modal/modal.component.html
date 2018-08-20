@@ -2,9 +2,11 @@
     <div class="modal__header">
        Comments
     </div>
-    <div *ngFor="let b of comment" class="item">
-        <div class="author"> {{b.user.login}}</div>
-        <div class="message">{{b.body}}</div>
+    <div class="modal__body">
+        <div *ngFor="let b of comment" class="item">
+            <div class="author"> {{b.user.login}}</div>
+            <div class="message">{{b.body}}</div>
+        </div>
     </div>
-    <button (click)="close()"> close </button>
+    <button (click)="close()" class="btn"> close </button>
 </div>
