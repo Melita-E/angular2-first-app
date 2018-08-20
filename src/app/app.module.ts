@@ -5,10 +5,11 @@ import { HttpModule } from '@angular/http';
 import {AppComponent} from './app.component';
 import  {ColorDirective} from './color/color.directive';
 import {ModalComponent} from './modal/modal.component';
+import {ListComponent} from "./list/list.component";
 
 @NgModule({
   imports: [BrowserModule, HttpModule],
-  declarations: [AppComponent, ColorDirective, ModalComponent],
+  declarations: [AppComponent, ColorDirective, ModalComponent, ListComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
