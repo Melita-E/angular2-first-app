@@ -6,7 +6,7 @@
     padding: 10px;
     background: white;
     transform: translate(-50%, -50%);
-    box-shadow: inset 0 0 7px 3px rgba(255,255,255,0.5), 0 -1px 7px 5px rgba(6,6,6,0.5);}
+    box-shadow: inset 0 0 7px 3px rgba(255,255,255,0.5), -1px 0px 5px 1px #c0d3eb;}
 
 .modal__header{
     text-transform: uppercase;
@@ -19,6 +19,7 @@
 .modal__body {
     max-height: 400px;
     overflow: auto;
+    box-shadow: -1px 0px 10px 1px #eaeaea;
 }
 .item{
     margin: 5px 0;
@@ -40,12 +41,11 @@
     position: relative;
     display: inline-block;
     padding: 5px 10px;
-    margin: 5px 0;
+    margin: 10px 0 0 0;
     vertical-align: middle;
     cursor: pointer;
     border: 1px solid #c0d3eb;
     border-radius: 5px;
-    appearance: none;
 }
 .btn-primary {
     color: #fff;
