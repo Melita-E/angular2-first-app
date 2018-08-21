@@ -1,14 +1,8 @@
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
-
 ul{
   list-style-type: none;
   border: 1px solid #e1e4e8;
-  margin: 0 20%;
+  margin-left: 150px;
+  background: #00000059;
   li{
     border-top: 1px solid #e1e4e8;
     padding: 10px;
@@ -32,14 +26,10 @@ h1{
   top:0px;
 }
 a{
-  color: #24292e;
   text-decoration: none;
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
-  &:hover{
-    color: forestgreen;
-  }
 }
 .right-col, .left-col{
   display: inline-block;
@@ -59,11 +49,10 @@ a{
 }
 
 .comment{
-  color: teal;
   padding: 5px;
   &:hover{
     .comment__icon path {
-      stroke: teal;
+      stroke: #fff;
     }
     .comment__amount {
       font-weight: 600;
@@ -77,29 +66,11 @@ a{
     display: inline-block;
     vertical-align: middle;
     path{
-      fill:  teal;
+      fill:  #fff;
     }
   }
 }
 
-.btn{
-  padding: 10px;
-  background-color: #ccc;
-  color: #fff;
-  border: 1px solid #ccc;
-  outline: none;
-  cursor: pointer;
-  &.send{
-    background: forestgreen;
-    border-color: forestgreen;
-    &:hover{
-      background: darkgreen;
-    }
-  }
-  &:hover{
-    background: #666;
-  }
-}
 .clearfix, .clearfix:before, .clearfix:after{
   clear: both;
   display: table;
