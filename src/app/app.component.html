@@ -1,18 +1,24 @@
-<div class="wrapper">
-    <nav>
-        <ul class="main-nav">
-            <li class="main-nav__item">
-                <a routerLink="/home">Home</a>
-            </li>
-            <li class="main-nav__item">
-                <a routerLink="/list">list</a>
-            </li>
-            <li class="main-nav__item">
-                <a routerLink="/page1">page 1</a>
-            </li>
-        </ul>
-    </nav>
+<div class="theme">
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="main-nav">
+                    <li class="main-nav__item">
+                        <a routerLink="/home">Home</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a routerLink="/list">list</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a routerLink="/page1">page 1</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main>
-        <router-outlet></router-outlet>
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
     </main>
 </div>

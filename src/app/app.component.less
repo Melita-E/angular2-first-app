@@ -11,21 +11,40 @@
 
 body {
   font-family: sans-serif;
+  color: #fff;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1024px;
 }
 
 .main-nav {
   list-style-type: none;
-  padding: 20px;
   display: flex;
+  padding: 10px 0;
+  //position: fixed;
   &__item {
+    border-radius: 20px;
     &:hover, &.active {
-      background: forestgreen;
+      background: rgba(130, 130, 130, 0.25);
     }
     a {
-      color: #000;
+      color: #fff;
       text-decoration: none;
-      padding: 5px 10px;
+      padding: 6px 12px;
       display: inline-block;
     }
   }
+}
+
+.theme {
+  background-image: url(@bg-2);
+  background-size: cover;
+  background-position: center;
+}
+
+main {
+  overflow: auto;
+  height: calc(100vh - 50px );
 }
