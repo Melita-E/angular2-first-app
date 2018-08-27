@@ -1,30 +1,24 @@
-<ul>
-    <li class="clearfix"  *ngFor="let a of mock">
-        <div class="left-col">
-            <div>
-                <span>{{a?.title}}</span>
-
-                <span *ngFor="let c of a.labels"  class="label" color="{{getColor(c.color)}}">{{c.name}}</span>
-            </div>
-
-            <div class="second-line">
-                <span># {{a.number }}</span>
-                <a href="{{ a.user.url}}">
-                    {{ a.user.login }}
-                    <img src="{{ a.user.avatar_url}}" alt="avatar" width="20px">
-                </a>
-              <span>{{'created '}}{{ a.created_at | date: 'dd/MM/yyyy HH:mm' }}</span>
-            </div>
+<div class="theme">
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="main-nav">
+                    <li class="main-nav__item">
+                        <a routerLink="/home">Home</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a routerLink="/list">list</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a routerLink="/page1">page 1</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-
-        <div class="right-col">
-            <span *ngFor="let b of a.assignees"> <img src="{{ b.avatar_url}}" alt="as" width="30px"></span>
-            <a *ngIf="a.comments > 0" class="comment" (click)="getArray(a.comments_url)" >
-                <svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"></path></svg>
-                <span> {{ a.comments }} </span>
-            </a>
+    </header>
+    <main>
+        <div class="container">
+            <router-outlet></router-outlet>
         </div>
-
-    </li>
-</ul>
-<modal [url]="attr" [(visible)]="showDialog"></modal>
+    </main>
+</div>
