@@ -8,25 +8,24 @@
   padding: 0;
   margin: 0;
 }
+
 body {
-  color: #fff;
   font-family: sans-serif;
 }
 
-ul  {
+.main-nav {
   list-style-type: none;
-}
-
-.content {
+  padding: 20px;
   display: flex;
-  width: 1024px;
-  margin: 0 auto;
-}
-
-.wrapper {
-  background-image: url(@bg-2);
-  max-height: 100vh;
-  overflow: auto;
-  background-size: cover;
-  background-position: center;
+  &__item {
+    &:hover, &.active {
+      background: forestgreen;
+    }
+    a {
+      color: #000;
+      text-decoration: none;
+      padding: 5px 10px;
+      display: inline-block;
+    }
+  }
 }

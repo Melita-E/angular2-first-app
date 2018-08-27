@@ -1,8 +1,18 @@
 <div class="wrapper">
-    <div class="header"></div>
-    <div class="content">
-        <main-menu></main-menu>
-        <list></list>
-    </div>
-    <div class="footer"></div>
+    <nav>
+        <ul class="main-nav">
+            <li class="main-nav__item">
+                <a routerLink="/home">Home</a>
+            </li>
+            <li class="main-nav__item">
+                <a routerLink="/list">list</a>
+            </li>
+            <li class="main-nav__item">
+                <a routerLink="/page1">page 1</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <router-outlet></router-outlet>
+    </main>
 </div>
