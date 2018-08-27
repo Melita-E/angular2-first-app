@@ -8,25 +8,43 @@
   padding: 0;
   margin: 0;
 }
+
 body {
-  color: #fff;
   font-family: sans-serif;
+  color: #fff;
 }
 
-ul  {
-  list-style-type: none;
-}
-
-.content {
-  display: flex;
-  width: 1024px;
+.container {
   margin: 0 auto;
+  width: 1024px;
 }
 
-.wrapper {
+.main-nav {
+  list-style-type: none;
+  display: flex;
+  padding: 10px 0;
+  //position: fixed;
+  &__item {
+    border-radius: 20px;
+    &:hover, &.active {
+      background: rgba(130, 130, 130, 0.25);
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      padding: 6px 12px;
+      display: inline-block;
+    }
+  }
+}
+
+.theme {
   background-image: url(@bg-2);
-  max-height: 100vh;
-  overflow: auto;
   background-size: cover;
   background-position: center;
+}
+
+main {
+  overflow: auto;
+  height: calc(100vh - 50px );
 }
