@@ -1,0 +1,40 @@
+input[type="radio"] {
+  display: none;
+}
+label {
+  padding: 10px 5px;
+  display: inline-block;
+  //border: 1px solid #00000059;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+input:checked + label {
+  background: #00000059;
+  &.in ~ .grid .grid__row:not(:first-child) {
+    &:not(.in) {
+      display: none;
+    }
+  }
+
+  &.out ~ .grid .grid__row:not(:first-child) {
+    &:not(.out) {
+      display: none;
+    }
+  }
+}
+
+.grid {
+  margin-top: 10px;
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border: 1px solid #00000059;
+    &:not(:first-child) {
+      border-top: 0;
+    }
+  }
+  &__cell{
+    padding: 10px 5px;
+  }
+}

@@ -23,7 +23,7 @@ body {
   list-style-type: none;
   display: flex;
   padding: 10px 0;
-  //position: fixed;
+  background: #00000059;
   &__item {
     border-radius: 20px;
     &:hover, &.active {
@@ -38,13 +38,12 @@ body {
   }
 }
 
+//.theme {
+//  background-image: url(@bg-2);
+//  background-size: cover;
+//  background-position: center;
+//}
 .theme {
-  background-image: url(@bg-2);
-  background-size: cover;
-  background-position: center;
-}
-
-main {
-  overflow: auto;
-  height: calc(100vh - 50px );
+  background: darkgrey;
+  min-height: 100vh;
 }

@@ -19,7 +19,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
     this.appService.getData('./app/issues.json').subscribe((data: Response) => {
-      this.mock=data.json();
+      this.mock = data.json();
     });
   }
 

@@ -1,0 +1,51 @@
+[
+  {
+    "Time" : "12:30",
+    "Destination" : "Frankfurt",
+    "AirLine" : "Lufthansa",
+    "Status" : {
+      "Departures": "Boarding"
+    }
+  },
+  {
+    "Time" : "13:05",
+    "Destination" : "Helsinki",
+    "AirLine" : "Finnair",
+    "Status" : {
+      "Arrivals": "Arrived"
+    }
+  },
+  {
+    "Time" : "13:20",
+    "Destination" : "Prague",
+    "AirLine" : "Czech Airlines",
+    "Status" : {
+      "Arrivals": "Canceled"
+    }
+  },
+  {
+    "Time" : "13:20",
+    "Destination" : "Zurich",
+    "AirLine" : "SWISS",
+    "Status" : {
+      "Arrivals": "Expected 13:50"
+    }
+  },
+  {
+    "Time" : "13:20",
+    "Destination" : "Munich",
+    "AirLine" : "Lufthansa",
+    "Status" : {
+      "Arrivals": "Delayed"
+    }
+  },
+  {
+    "Time" : "13:20",
+    "Destination" : "Warsaw",
+    "AirLine" : "LOT",
+    "Status" : {
+      "Departures": "Departed at 07:47"
+    }
+  }
+
+]

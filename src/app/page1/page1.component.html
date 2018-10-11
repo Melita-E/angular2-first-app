@@ -1,0 +1,23 @@
+<p>{{ today | date:'medium' }}</p>
+
+<input type="radio" id='one' name='fly' checked><label for="one">все</label>
+<input type="radio" id='two' name='fly'><label for="two" class="out">отправление</label>
+<input type="radio" id='three' name='fly'><label for="three" class='in'>прибытие</label>
+
+<div class="grid--flight grid">
+    <div class="grid__row grid__row--head">
+        <div class="grid__cell">Time</div>
+        <div class="grid__cell">Destination</div>
+        <div class="grid__cell">Airline</div>
+        <div class="grid__cell">Status</div>
+
+    </div>
+    <div class="grid__row grid__row--head"
+         *ngFor="let f of mock"
+         [ngClass]="{'Arrivals':'out','Departures':'in'}[objectKeys(f?.Status)]" >
+        <div class="grid__cell">{{f?.Time}}</div>
+        <div class="grid__cell">{{f?.Destination}}</div>
+        <div class="grid__cell">{{f?.AirLine}}</div>
+        <div class="grid__cell" *ngFor="let status of objectKeys(f?.Status) ">  {{ status }}</div>
+    </div>
+</div>
