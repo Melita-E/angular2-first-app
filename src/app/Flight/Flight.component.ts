@@ -4,12 +4,12 @@ import  {AppService} from '../app.service';
 import {FlightMock} from '../flightMock';
 
 @Component({
-    selector: 'app-page1',
+    selector: 'app-Flight',
     providers: [AppService],
-    templateUrl: './page1.component.html',
-    styleUrls: ['./page1.component.css']
+    templateUrl: './Flight.component.html',
+    styleUrls: ['./Flight.component.css']
 })
-export class Page1Component implements OnInit {
+export class FlightComponent implements OnInit {
     mock: FlightMock[] = [];
     objectKeys = Object.keys;
     today: number = Date.now();
